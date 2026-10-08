@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Live Result Portal</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        body { background-color: #f0f2f5; padding: 15px; }
+        .main-card { max-width: 500px; margin: 0 auto; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: #d32f2f; color: #fff; text-align: center; padding: 20px 10px; }
+        .header h1 { font-size: 22px; margin-bottom: 5px; text-transform: uppercase; }
+        .header p { font-size: 13px; color: #ffeb3b; }
+        .result-table { width: 100%; border-collapse: collapse; text-align: center; }
+        .result-table th { background: #333; color: #fff; padding: 12px; font-size: 15px; }
+        .result-table td { padding: 14px 10px; border-bottom: 1px solid #e0e0e0; font-size: 16px; font-weight: bold; }
+        .game-name { color: #333; text-align: left; padding-left: 20px !important; }
+        .old-num { color: #757575; }
+        .live-num { color: #d32f2f; font-size: 20px; }
+        .footer { text-align: center; padding: 15px; font-size: 12px; color: #666; background: #fafafa; }
+    </style>
+</head>
+<body>
+
+<div class="main-card">
+    <div class="header">
+        <h1>Live Result Board</h1>
+        <p>Sabse Tez Aur Sahi Result Update</p>
+    </div>
+
+    <table class="result-table">
+        <thead>
+            <tr>
+                <th style="text-align: left; padding-left: 20px;">Game Name</th>
+                <th>Kal</th>
+                <th>Aaj</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="game-name">Disawar</td>
+                <td class="old-num">42</td>
+                <td class="live-num">89</td>
+            </tr>
+            <tr>
+                <td class="game-name">Faridabad</td>
+                <td class="old-num">15</td>
+                <td class="live-num">--</td>
+            </tr>
+            <tr>
+                <td class="game-name">Gaziabad</td>
+                <td class="old-num">67</td>
+                <td class="live-num">--</td>
+            </tr>
+            <tr>
+                <td class="game-name">Gali</td>
+                <td class="old-num">90</td>
+                <td class="live-num">--</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        © Live Result Portal - Daily Updates
+    </div>
+</div>
+
+</body>
+  </html>
+  
