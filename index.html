@@ -7,16 +7,17 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
         body { background-color: #f0f2f5; padding: 15px; }
-        .main-card { max-width: 500px; margin: 0 auto; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; }
+        .main-card { max-width: 550px; margin: 0 auto; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); overflow: hidden; }
         .header { background: #d32f2f; color: #fff; text-align: center; padding: 20px 10px; }
         .header h1 { font-size: 22px; margin-bottom: 5px; text-transform: uppercase; }
         .header p { font-size: 13px; color: #ffeb3b; }
         .result-table { width: 100%; border-collapse: collapse; text-align: center; }
-        .result-table th { background: #333; color: #fff; padding: 12px; font-size: 15px; }
-        .result-table td { padding: 14px 10px; border-bottom: 1px solid #e0e0e0; font-size: 16px; font-weight: bold; }
-        .game-name { color: #333; text-align: left; padding-left: 20px !important; }
+        .result-table th { background: #333; color: #fff; padding: 10px; font-size: 14px; }
+        .result-table td { padding: 12px 8px; border-bottom: 1px solid #e0e0e0; font-size: 15px; font-weight: bold; }
+        .game-name { color: #333; text-align: left; padding-left: 15px !important; }
+        .time-col { color: #0288d1; font-size: 13px; font-weight: normal; }
         .old-num { color: #757575; }
-        .live-num { color: #d32f2f; font-size: 20px; }
+        .live-num { color: #d32f2f; font-size: 18px; }
         .footer { text-align: center; padding: 15px; font-size: 12px; color: #666; background: #fafafa; }
     </style>
 </head>
@@ -31,31 +32,48 @@
     <table class="result-table">
         <thead>
             <tr>
-                <th style="text-align: left; padding-left: 20px;">Game Name</th>
+                <th style="text-align: left; padding-left: 15px;">Game Name</th>
+                <th>Time</th>
                 <th>Kal</th>
                 <th>Aaj</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td class="game-name">Disawar</td>
-                <td class="old-num">42</td>
-                <td class="live-num">89</td>
+                <td class="game-name">Delhi Bazar</td>
+                <td class="time-col">03:00 PM</td>
+                <td class="old-num">24</td>
+                <td class="live-num">56</td>
+            </tr>
+            <tr>
+                <td class="game-name">Shri Ganesh</td>
+                <td class="time-col">04:30 PM</td>
+                <td class="old-num">81</td>
+                <td class="live-num">--</td>
             </tr>
             <tr>
                 <td class="game-name">Faridabad</td>
+                <td class="time-col">06:00 PM</td>
                 <td class="old-num">15</td>
                 <td class="live-num">--</td>
             </tr>
             <tr>
                 <td class="game-name">Gaziabad</td>
+                <td class="time-col">08:30 PM</td>
                 <td class="old-num">67</td>
                 <td class="live-num">--</td>
             </tr>
             <tr>
                 <td class="game-name">Gali</td>
+                <td class="time-col">11:30 PM</td>
                 <td class="old-num">90</td>
                 <td class="live-num">--</td>
+            </tr>
+            <tr>
+                <td class="game-name">Disawar</td>
+                <td class="time-col">05:00 AM</td>
+                <td class="old-num">42</td>
+                <td class="live-num">89</td>
             </tr>
         </tbody>
     </table>
@@ -66,5 +84,4 @@
 </div>
 
 </body>
-  </html>
-  
+</html>
