@@ -2,62 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Satta King Fast Results & Monthly Chart</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
-        body { background-color: #f5f5f5; color: #333; padding: 5px; }
-        .container { max-width: 500px; margin: 0 auto; background: #fff; border: 1px solid #ccc; }
+        body { background-color: #ffffff; color: #333; width: 100%; margin: 0; padding: 0; overflow-x: hidden; }
+        .container { width: 100%; max-width: 100%; margin: 0 auto; background: #fff; }
 
         /* Description Paragraph */
-        .desc-text { font-size: 13px; color: #444; padding: 10px; line-height: 1.4; text-align: left; background: #fafafa; }
+        .desc-text { font-size: 14px; color: #333; padding: 12px; line-height: 1.5; text-align: left; background: #fafafa; border-bottom: 1px solid #eee; }
 
         /* Disclaimer Red Box */
-        .disclaimer-box { background-color: #ff5252; color: #fff; padding: 12px; font-size: 12px; line-height: 1.4; text-align: left; }
-        .disclaimer-box a { color: #fff; font-weight: bold; }
+        .disclaimer-box { background-color: #ff3838; color: #fff; padding: 14px; font-size: 13px; line-height: 1.5; text-align: left; }
+        .disclaimer-box a { color: #fff; font-weight: bold; text-decoration: underline; }
 
         /* Timestamp */
-        .timestamp { font-size: 13px; color: #2e7d32; text-align: center; padding: 8px; font-weight: 500; }
+        .timestamp { font-size: 14px; color: #1b5e20; text-align: center; padding: 10px; font-weight: bold; background-color: #f1f8e9; }
 
         /* Header Green Banner */
-        .green-header { background-color: #26a69a; color: white; text-align: center; padding: 10px; font-size: 15px; font-weight: bold; }
+        .green-header { background-color: #00897b; color: white; text-align: center; padding: 12px 8px; font-size: 16px; font-weight: bold; }
 
         /* Table Header Dark Bar */
-        .table-bar { background-color: #37474f; color: white; display: flex; justify-content: space-between; padding: 8px 10px; font-size: 13px; font-weight: bold; }
+        .table-bar { background-color: #263238; color: white; display: flex; justify-content: space-between; padding: 10px 12px; font-size: 14px; font-weight: bold; }
 
         /* Category Header Banner */
-        .category-tag { background-color: #ffebee; color: #e53935; font-size: 12px; font-weight: bold; padding: 6px 10px; border-left: 4px solid #e53935; text-transform: uppercase; }
+        .category-tag { background-color: #ffebee; color: #d32f2f; font-size: 13px; font-weight: bold; padding: 8px 12px; border-left: 5px solid #d32f2f; text-transform: uppercase; }
 
         /* Result Row Layout */
-        .result-card { display: flex; justify-content: space-between; align-items: center; padding: 8px 10px; border-bottom: 1px solid #e0e0e0; background: #fff; }
-        .result-card.highlight { background-color: #ffc107; } /* Yellow highlight for major games */
+        .result-card { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #e0e0e0; background: #fff; }
+        .result-card.highlight { background-color: #ffc107; } /* Yellow highlight */
 
         .game-info { text-align: left; }
-        .game-title { font-size: 14px; font-weight: bold; color: #111; text-transform: uppercase; }
-        .game-time { font-size: 11px; color: #555; margin-top: 2px; }
-        .game-time a { color: #1e88e5; text-decoration: none; }
+        .game-title { font-size: 16px; font-weight: bold; color: #000; text-transform: uppercase; }
+        .game-time { font-size: 12px; color: #444; margin-top: 3px; }
+        .game-time a { color: #1565c0; text-decoration: none; font-weight: 500; }
 
-        .game-numbers { display: flex; gap: 20px; font-size: 18px; font-weight: bold; color: #111; }
-        .game-numbers span { min-width: 25px; text-align: center; }
+        .game-numbers { display: flex; gap: 25px; font-size: 20px; font-weight: bold; color: #000; }
+        .game-numbers span { min-width: 30px; text-align: center; }
 
-        /* Top Yellow Announcement Box */
-        .top-banner { background-color: #ffc107; text-align: center; padding: 8px; font-weight: bold; font-size: 13px; color: #b71c1c; }
-        .blue-banner { background-color: #1e88e5; color: white; text-align: center; padding: 8px; font-size: 12px; font-weight: bold; }
+        /* Announcement Banner */
+        .top-banner { background-color: #ffc107; text-align: center; padding: 10px; font-weight: bold; font-size: 14px; color: #b71c1c; border-top: 1px solid #ffa000; }
+        .blue-banner { background-color: #1976d2; color: white; text-align: center; padding: 10px; font-size: 13px; font-weight: bold; }
 
         /* Monthly Chart Styling */
-        .chart-header { background-color: #26a69a; color: white; text-align: center; padding: 8px; font-size: 13px; font-weight: bold; }
-        .chart-table { width: 100%; border-collapse: collapse; text-align: center; font-size: 13px; }
-        .chart-table th { background-color: #ffc107; color: #b71c1c; padding: 6px; border: 1px solid #e0e0e0; font-size: 12px; }
-        .chart-table td { padding: 6px; border: 1px solid #e0e0e0; font-weight: 500; }
-        .chart-table td:first-child { color: #d32f2f; font-weight: bold; }
+        .chart-header { background-color: #00897b; color: white; text-align: center; padding: 10px; font-size: 14px; font-weight: bold; }
+        .chart-table { width: 100%; border-collapse: collapse; text-align: center; font-size: 14px; }
+        .chart-table th { background-color: #ffc107; color: #b71c1c; padding: 8px 4px; border: 1px solid #ccc; font-size: 13px; font-weight: bold; }
+        .chart-table td { padding: 8px 4px; border: 1px solid #e0e0e0; font-weight: bold; }
+        .chart-table td:first-child { color: #d32f2f; background-color: #fafafa; }
 
         /* Dropdown Section */
-        .filter-section { background-color: #ffc107; padding: 15px; text-align: center; margin-top: 5px; }
-        .filter-title { font-size: 13px; font-weight: bold; color: #333; margin-bottom: 10px; }
-        .filter-select { width: 80%; padding: 8px; margin: 5px 0; border: 1px solid #ccc; border-radius: 4px; background: #fff; font-size: 13px; }
-        .go-btn { background-color: #1565c0; color: white; border: none; padding: 8px 30px; font-weight: bold; border-radius: 3px; margin-top: 8px; cursor: pointer; }
-        .nav-btns { display: flex; justify-content: space-between; margin: 10px 0; }
-        .nav-btn { background-color: #1e88e5; color: white; text-decoration: none; padding: 8px 15px; font-size: 12px; font-weight: bold; border-radius: 2px; width: 48%; text-align: center; }
+        .filter-section { background-color: #ffc107; padding: 15px 12px; text-align: center; }
+        .filter-title { font-size: 13px; font-weight: bold; color: #222; margin-bottom: 12px; line-height: 1.4; }
+        .filter-select { width: 100%; padding: 10px; margin: 6px 0; border: 1px solid #aaa; border-radius: 4px; background: #fff; font-size: 14px; font-weight: 500; }
+        .go-btn { background-color: #0d47a1; color: white; border: none; padding: 10px 40px; font-size: 15px; font-weight: bold; border-radius: 4px; margin-top: 10px; width: 50%; cursor: pointer; }
+
+        /* Navigation Buttons */
+        .nav-btns { display: flex; justify-content: space-between; padding: 8px; background: #fff; gap: 8px; }
+        .nav-btn { background-color: #1976d2; color: white; text-decoration: none; padding: 10px; font-size: 13px; font-weight: bold; border-radius: 3px; width: 50%; text-align: center; }
     </style>
 </head>
 <body>
@@ -87,7 +89,7 @@
     <!-- Dark Regional Draw Bar -->
     <div class="table-bar">
         <span>Regional Offline Draw Results</span>
-        <span>Wed. 7th &nbsp;&nbsp;&nbsp; Thu. 8th</span>
+        <span>Wed. 7th &nbsp;&nbsp; Thu. 8th</span>
     </div>
 
     <!-- Live Section Header -->
@@ -152,7 +154,7 @@
     <!-- Show Game Ad Banner -->
     <div class="top-banner">
         🎀 SHOW YOUR GAME HERE 🎀<br>
-        <span style="font-size: 11px; font-weight: normal; color: #333;">Contact us to show your game here</span>
+        <span style="font-size: 12px; font-weight: normal; color: #222;">Contact us to show your game here</span>
     </div>
 
     <div class="blue-banner">
@@ -203,11 +205,11 @@
         <select class="filter-select">
             <option>January</option>
             <option selected>October</option>
-        </select><br>
+        </select>
         <select class="filter-select">
             <option selected>2026</option>
             <option>2025</option>
-        </select><br>
+        </select>
         <button class="go-btn">Go</button>
     </div>
 
